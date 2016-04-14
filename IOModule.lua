@@ -32,14 +32,14 @@ function  readMonth(fileName)
 end
 
 
--- Usa a readMonth para ler todos os meses de "mes i.txt" até 
---  "mes j.txt", armazena os gastos e vendas em um vetor
+-- Usa a readMonth para ler todos os meses mes inicial 
+--  mes final, armazena os gastos e vendas em um vetor
 --  e os retorna 
-function readAllMonths(i, j)
+function readAllMonths(mesInicial, mesFinal)
 	local mes 
 	local gastos, vendas = {}, {}
 
-	for mes = i,j do
+	for mes = mesInicial, mesFinal do
 		gastos[mes], vendas[mes] = readMonth("mes " .. mes .. ".txt")
 	end
 
