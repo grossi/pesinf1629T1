@@ -1,3 +1,5 @@
+-- Gabriel Rossi & Marcos Rapoport --
+
 -- Função do crescimento --
 -- Modulo que contem a função usada
 --  para avaliar o crescimento mensal
@@ -6,7 +8,7 @@
 --  e um vetor de vendas e calcula
 --  o crescimento total bruto e liquido
 function calculateTotalGrowth(custos, vendas)
-	
+
 	-- Calcula o lucro de cada mes
 	local lucros = {}
 	for k, v in ipairs(custos) do
@@ -22,11 +24,11 @@ function calculateTotalGrowth(custos, vendas)
 end
 
 
--- Função que recebe um vetor de custos e  
---  um vetor de vendas e calcula o 
+-- Função que recebe um vetor de custos e
+--  um vetor de vendas e calcula o
 --  crescimento mensal bruto e liquido
 function calculateMensalGrowth(custos, vendas)
-	
+
 	-- Calcula o lucro de cada mes
 	local lucros = {}
 	for k, v in ipairs(custos) do
@@ -46,4 +48,3 @@ function calculateMensalGrowth(custos, vendas)
 	return crescimentoLiquidoMes, crescimentoBrutoMes
 
 end
-
