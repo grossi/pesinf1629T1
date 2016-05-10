@@ -1,8 +1,10 @@
+-- Marcos Rapoport & Gabriel Rossi --
+
 -- I/O Module --
 -- Modulo de leitura e escrita do programa
 
 -- Le os valores de um mes e retorna a soma dos gastos
---  e das vendas 
+--  e das vendas
 function  readMonth(fileName)
 	local vendas, gastos = 0, 0
 
@@ -15,7 +17,7 @@ function  readMonth(fileName)
 	-- Verifica se o arquivo é valido
 	if not gastos then
 		file:close()
-		return -1 
+		return -1
 	end
 
 	while true do
@@ -32,11 +34,11 @@ function  readMonth(fileName)
 end
 
 
--- Usa a readMonth para ler todos os meses mes inicial 
+-- Usa a readMonth para ler todos os meses mes inicial
 --  mes final, armazena os gastos e vendas em um vetor
---  e os retorna 
+--  e os retorna
 function readAllMonths(mesInicial, mesFinal)
-	local mes 
+	local mes
 	local gastos, vendas = {}, {}
 
 	for mes = mesInicial, mesFinal do
